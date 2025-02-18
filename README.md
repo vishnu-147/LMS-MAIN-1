@@ -37,13 +37,13 @@ A learning management and online assessment system for academic education.
 1. Clone the project
 
 ```bash
-git clone https://github.com/nz-m/eLMS-SWE.git
+git clone https://github.com/nz-m/LMS-MAIN-1.git
 ```
 
 2. Go to the project directory
 
 ```bash
-cd eLMS-SWE
+cd LMS-MAIN-1
 ```
 
 3. Create a virtual environment and activate it (Windows)
