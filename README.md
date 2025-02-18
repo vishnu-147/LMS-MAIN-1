@@ -1,6 +1,6 @@
-# Learning Management System
+# e-Learning Management System
 
-LMS is a software application that facilitates the administration, documentation, tracking, reporting, and delivery of educational courses or training programs. It's essentially a digital platform designed to streamline the process of learning and teaching, whether in academic institutions, corporate settings, or for personal development.
+A learning management and online assessment system for academic education.
 
 ## Features
 
@@ -8,6 +8,10 @@ LMS is a software application that facilitates the administration, documentation
 - The teacher creates course content, announcements, assignments, quizzes, takes attendance, etc. A teacher can see the details and analysis of the assessments.
 - Students can enroll in the courses using the access key, see the course content of the enrolled courses, participate in assessments and see their results in detail.
 - Discussion section for both teacher and student.
+
+## Relational Schema
+
+![schema](https://user-images.githubusercontent.com/87283264/187967219-55bea00e-3151-488a-a4be-d2a95b9d8a5c.png)
 
 ## Tech Stack
 
@@ -19,10 +23,79 @@ LMS is a software application that facilitates the administration, documentation
 
 ## UI
 
-![image](https://github.com/vishnuvardhan1606/LMS-MAIN/assets/149487193/aeb5d811-af6b-44e4-be82-a36f0600cb88)
-![image](https://github.com/vishnuvardhan1606/LMS-MAIN/assets/149487193/a3f58ffc-5f65-452a-ba8b-65e5af2e1f16)
-![image](https://github.com/vishnuvardhan1606/LMS-MAIN/assets/149487193/b3a84a16-8313-4ed2-8027-79f78d755100)
-![image](https://github.com/vishnuvardhan1606/LMS-MAIN/assets/149487193/b64824bd-d9ed-4133-baf5-c3dbdae1162c)
-![image](https://github.com/vishnuvardhan1606/LMS-MAIN/assets/149487193/4c943d6d-f1d4-430f-b5f1-b8a461d419cd)
-![image](https://github.com/vishnuvardhan1606/LMS-MAIN/assets/149487193/d5a4201d-73e5-4005-967b-03f5dfb5cad6)
+![Screenshot (65)](https://user-images.githubusercontent.com/87283264/194387627-47bc4506-5acb-46da-8ae0-70ea1e7e4eb8.png)
+![Screenshot (63)](https://user-images.githubusercontent.com/87283264/194389617-1d1118a5-e0a1-41a2-94b6-ef636e6a8d5e.png)
+![Screenshot (70)](https://user-images.githubusercontent.com/87283264/194387776-552bdd11-9252-4be2-8139-10e0f270c09f.png)
+![Screenshot (71)](https://user-images.githubusercontent.com/87283264/194389301-da1f2cd5-11fd-469d-9137-380c4916e169.png)
+![Screenshot (72)](https://user-images.githubusercontent.com/87283264/194389315-c59fbae1-b623-4ef7-bc5b-7cab6c1ae3a8.png)
+![Screenshot (67)](https://user-images.githubusercontent.com/87283264/194387798-77c6ba2c-9089-4469-88e0-282191535211.png)
+![Screenshot (68)](https://user-images.githubusercontent.com/87283264/194387811-bd22cd8c-854c-4849-9aa9-0a71b53494a2.png)
+![Screenshot (69)](https://user-images.githubusercontent.com/87283264/194387822-649bd890-cb57-47b5-b380-4e30499ae142.png)
 
+## Run Locally
+
+1. Clone the project
+
+```bash
+git clone https://github.com/nz-m/eLMS-SWE.git
+```
+
+2. Go to the project directory
+
+```bash
+cd eLMS-SWE
+```
+
+3. Create a virtual environment and activate it (Windows)
+
+```bash
+python -m venv env
+```
+
+```bash
+env\Scripts\activate
+```
+
+4. Install dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+> **Note:** If you're using newer versions of python(3.10+), you may need to add the `--use-deprecated=legacy-resolver` option when installing dependencies with `pip` to avoid errors :
+
+```bash
+pip install -r requirements.txt --use-deprecated=legacy-resolver
+```
+
+5. Make migrations and migrate
+
+```bash
+python manage.py makemigrations
+```
+
+```bash
+python manage.py migrate
+```
+
+6. Create admin/superuser
+
+```bash
+python manage.py createsuperuser
+```
+
+7. Finally run the project
+
+```bash
+python manage.py runserver
+```
+
+Now the project should be running on http://127.0.0.1:8000/
+
+Login as admin and add some courses, teacher and students.
+
+Demo : https://youtu.be/NyL2ajUNxYk
+
+## License
+
+[The MIT License (MIT)](https://github.com/nz-m/eLMS-SWE/blob/main/LICENCE)
